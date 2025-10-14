@@ -2,5 +2,13 @@ services:
   - type: web
     name: smart-office-backend
     env: node
-    buildCommand: npm install
-    startCommand: npm
+    region: oregon
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: GEN_API_KEY
+        sync: false
+      - key: GEN_MODEL
+        value: "gemini-2.0-flash"
+
