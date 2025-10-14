@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 services:
   - type: web
     name: smart-office-backend
@@ -12,3 +13,11 @@ services:
       - key: GEN_MODEL
         value: "gemini-2.0-flash"
 
+=======
+services:
+  - type: web
+    name: smart-office-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm
+>>>>>>> 1740209 (Add Render configuration)
