@@ -8,12 +8,13 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 console.log(" Clave de Gemini cargada:", process.env.GEMINI_API_KEY ? "✅ Sí" : "❌ No");
 
 // Ruta para generar carta con el modelo actualizado
 app.post("/api/generar-carta", async (req, res) => {
+  res.send("✅ Smart Office Backend funcionando correctamente");
   const { prompt } = req.body;
 
   try {
